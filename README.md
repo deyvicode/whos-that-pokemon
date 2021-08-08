@@ -1,4 +1,6 @@
-# whos-that-pokemon
+# Who's that Pokemon?
+
+![cover](./cover.png)
 
 ## Project setup
 ```
@@ -22,3 +24,6 @@ yarn test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Deploy
+See [Deployment Github Pages](https://cli.vuejs.org/guide/deployment.html#github-pages)
