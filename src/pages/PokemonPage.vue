@@ -1,13 +1,13 @@
 <template>
-    <h1 v-if="!pokemon">Loading...</h1>
+    <h1 v-if="!pokemon">Cargando...</h1>
     <div v-else>
-        <h1>¿Who's that Pokemon?</h1>
+        <h1 class="title">¿Quién es ese Pokémon?</h1>
         <pokemon-picture :pokemon-id="pokemon.id" :show-pokemon="showPokemon"></pokemon-picture>
-        <pokemon-options :pokemons="pokemonArr" @selection="checkSelection"></pokemon-options>
+        <pokemon-options :pokemons="pokemonArr" :finish="showPokemon" @selection="checkSelection"></pokemon-options>
         
         <div v-if="showAnswer" class="fade-in">
             <h2>{{ message }}</h2>
-            <button @click="newGame">Nuevo Juego</button>
+            <button @click="newGame">Jugar otra vez</button>
         </div>
     </div>
 </template>
@@ -44,8 +44,8 @@ export default {
         },
         checkSelection(idPokemon) {
             this.showPokemon = true
-            this.message = (idPokemon === this.pokemon.id) ? 'Correct' : 'Oops';
-            this.message += `, the pokemon is ${this.pokemon.name}`
+            this.message = (idPokemon === this.pokemon.id) ? 'Correcto' : 'Incorrecto';
+            this.message += `, el pokémon es ${this.pokemon.name}`
 
             this.showAnswer = true
         },
@@ -62,6 +62,39 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+    
+    .title {
+        -webkit-text-stroke: 1px #0f305b;
+        font-family: 'pokemon', sans-serif;
+        color: #f5c044;
+        font-size: 2.5rem;
+        text-shadow:
+            3px 3px 0 #0f305b,
+            -1px -1px 0 #0f305b,  
+            1px -1px 0 #0f305b,
+            -1px 1px 0 #0f305b,
+            1px 1px 0 #0f305b;
+        letter-spacing: 5px;
+    }
 
+    button {
+        font-family: 'pokemon', sans-serif;
+        background-color: #f5c044;
+        color: #425a7a;
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+        border-radius: 25px;
+        letter-spacing: 1.5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: #0e2542;
+    }
+
+    h2 {
+        color: #041e3d;
+    }
 </style>
