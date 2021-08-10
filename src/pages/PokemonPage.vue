@@ -63,35 +63,33 @@ export default {
 </script>
 
 <style scoped>
-    @import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+    @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
     
     .title {
-        -webkit-text-stroke: 1px #0f305b;
-        font-family: 'pokemon', sans-serif;
+        -webkit-text-stroke: .5px #0f305b;
+        font-family: 'Gochi Hand', Avenir, Helvetica, Arial, sans-serif;
         color: #f5c044;
-        font-size: 2.5rem;
+        font-size: 3.2rem;
         text-shadow:
             3px 3px 0 #0f305b,
             -1px -1px 0 #0f305b,  
             1px -1px 0 #0f305b,
             -1px 1px 0 #0f305b,
             1px 1px 0 #0f305b;
-        letter-spacing: 5px;
     }
 
     button {
-        font-family: 'pokemon', sans-serif;
+        font-family: 'Gochi Hand', Avenir, Helvetica, Arial, sans-serif;
         background-color: #f5c044;
-        color: #425a7a;
-        font-size: 1rem;
+        color: #0d325f;
+        font-size: 1.5rem;
         padding: 1rem 1.5rem;
         border-radius: 25px;
-        letter-spacing: 1.5px;
         cursor: pointer;
     }
 
     button:hover {
-        color: #0e2542;
+        background-color: #e9ab19;
     }
 
     h2 {
